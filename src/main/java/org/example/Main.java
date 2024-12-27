@@ -2,8 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class Main {
     public static void main(String[] args) {
         StoreApp app = new StoreApp();
@@ -14,8 +13,16 @@ public class Main {
             System.out.println("2. Список товаров");
             System.out.println("3. Выйти");
             System.out.print("Выберите действие: ");
-            int choice = scanner.nextInt();
+            int choice = -1;
+            try {
+                choice = scanner.nextInt();
+            } catch (Exception e) {
+                System.out.println("Ошибка ввода. Пожалуйста, введите число." + e.getMessage());
+                scanner.nextLine(); // очистка буфера
+                continue;
+            }
             scanner.nextLine();
+
 
             switch (choice) {
                 case 1:

@@ -49,7 +49,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return String.format("%-30s | %-15s | %10.2f | %5d", name, category, price, quantity);
+        return String.format("%-20s | %-15s | %10.2f | %5d", name, category, price, quantity);
     }
 }
 
